@@ -4,7 +4,7 @@ Quick Installation (under 5 minutes) scripts for OpenStack Folsom.
 A quick installation guide for OpenStack Folsom for a single or dual node installation.
 
 Prerequisites:
-- The base minimum is one Server with 2 Network cards (one public and one internal card) running Ubuntu 12.04. Two servers are required if you want to run Compute (Nova) on a secondary server
+- The base minimum is one Server with 2 Network cards (one public and one internal, or just one public ethernet card plus one virtual for internal use) running Ubuntu 12.04. Two servers are required if you want to run Compute (Nova) on a secondary server.
 - Run the scripts as root.
 - Have a minimum of two drives (which uses LVM)
 - It's recommended that you do this on a reinstalled test machine. It's against all possible recommendations to run these scripts on a production environment as it could potentially break/delete everything.
