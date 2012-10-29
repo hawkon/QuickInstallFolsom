@@ -1,0 +1,32 @@
+Quick Installation (under 5 minutes) scripts for OpenStack Folsom.
+-------------------------------
+
+A quick installation guide for OpenStack Folsom for a single or dual node installation.
+
+Prerequisites:
+- The base minimum is one Server with 2 Network cards (one public and one internal card) running Ubuntu 12.04. Two servers are required if you want to run Compute (Nova) on a secondary server
+- Run the scripts as root.
+- Have a minimum of two drives (which uses LVM)
+- It's recommended that you do this on a reinstalled test machine. It's against all possible recommendations to run these scripts on a production environment as it could potentially break/delete everything.
+- It's recommended that you have a range of public/internal IPs so you can assign public IPs to your virtual machines.
+
+Installation (as ROOT):
+apt-get update
+apt-get install git
+git clone https://github.com/speedis/openstackfolsom.git
+cd openstackfolsom
+chmod +x *.sh
+./folsom01.sh
+Follow the guide.
+
+Uninstall:
+To uninstall the whole installation (this will remove ALL trace of MySQL, Apache, RabbitMQ on the server etc so make sure you view and edit this file before running it!), run ./uninstall-folsom.sh
+
+
+
+Mainly based on:
+http://docs.openstack.org/trunk/openstack-compute/install/apt/content/
+https://github.com/mseknibilel/OpenStack-Folsom-Install-guide/
+ 
+Happy OpenStacking!
+/Fredrik Svantes
