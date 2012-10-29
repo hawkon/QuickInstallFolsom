@@ -13,7 +13,7 @@ Prerequisites:
 Installation (as ROOT):
 apt-get update
 apt-get install git
-git clone https://github.com/speedis/openstackfolsom.git
+git clone https://github.com/speedis/QuickInstallFolsom.git
 cd openstackfolsom
 chmod +x *.sh
 ./folsom01.sh
