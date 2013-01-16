@@ -54,6 +54,7 @@ then
   glance image-create --name "Ubuntu 12.04 LTS" --is-public true --container-format bare --disk-format qcow2 < images/precise-server-cloudimg-amd64-disk1.img
 else
   wget http://uec-images.ubuntu.com/precise/current/precise-server-cloudimg-amd64-disk1.img
+  mkdir images
   mv precise-server-cloudimg-amd64-disk1.img images/
   glance image-create --name "Ubuntu 12.04 LTS" --is-public true --container-format bare --disk-format qcow2 < images/precise-server-cloudimg-amd64-disk1.img
 fi
