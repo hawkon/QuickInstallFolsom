@@ -4,13 +4,6 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-eth0=$(/sbin/ifconfig eth0| sed -n 's/.*inet *addr:\([0-9\.]*\).*/\1/p')
-baseaddr="$(echo $eth1 | cut -d. -f1-3)"
-lsv="$(echo $eth1 | cut -d. -f4)"
-lsv=$(( $lsv + 1 ))
-computeip=$lsv
-computeip=$baseaddr.$computeip
-
 echo "Setting up vlan, bridge-utils, ntp, rabbitmq, mysql-server and python-mysqldb. Please pick a alphanumeric password (meaning no "!", "#" etc)."
 sleep 5
 apt-get -y install vlan bridge-utils ntp mysql-server python-mysqldb rabbitmq-server
